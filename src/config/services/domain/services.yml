@@ -1,0 +1,9 @@
+services:
+    # Candlestick collector service
+    kryptopus_cryptocompare_candlestick_collector:
+        class: "domain/service/CandlestickCollectorService"
+
+    # Exchange finder service
+    kryptopus_cryptocompare_exchange_finder:
+        class: "domain/service/ExchangeFinderService"
+

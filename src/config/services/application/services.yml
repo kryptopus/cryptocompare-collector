@@ -1,0 +1,15 @@
+services:
+    # Main exchange service
+    kryptopus_cryptocompare_exchange:
+        class: "application/service/ExchangeService"
+        arguments:
+            - "@kryptopus_cryptocompare_exchange_finder"
+
+
+    # Main collector service
+    kryptopus_cryptocompare_collector:
+        class: "application/service/CollectorService"
+        arguments:
+            - "@kryptopus_cryptocompare_candlestick_collector"
+
+

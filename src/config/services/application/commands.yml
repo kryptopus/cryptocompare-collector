@@ -1,0 +1,18 @@
+services:
+    # Command to collect
+    kryptopus_command_collect_cryptocompare:
+        class: "application/command/CollectCommand"
+        arguments:
+            - "@kryptopus_cryptocompare_collector"
+        tags:
+            - { name: "solfege.console.command" }
+
+    # Display exchange list
+    kryptopus_command_display_cryptocompare_exchange_list:
+        class: "application/command/DisplayExchangeListCommand"
+        arguments:
+            - "@kryptopus_cryptocompare_exchange"
+        tags:
+            - { name: "solfege.console.command" }
+
+
